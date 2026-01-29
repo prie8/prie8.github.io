@@ -11,98 +11,46 @@
 <body>
     <header>
         <div class="nav-container">
-            <a href="index.html" class="logo">Priya Emani</a>
+            <!-- Brand removed -->
             <nav class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="research.html">Research</a>
-                <a href="projects.html">Projects</a>
-                <a href="blog.html" class="active">Blog</a>
-                <a href="community.html">Community</a>
+                <a href="index.html">home</a>
+                <a href="projects.html">projects</a>
+                <a href="resume.html">resume</a>
+                <a href="journal.html" class="active">blog</a>
+                <a href="book_recs.html">book recs</a>
             </nav>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+                <span>☾</span>
+            </button>
         </div>
     </header>
 
     <main>
         <section class="section">
             <div class="container">
-                <h1>Thoughts & Essays</h1>
+                <h1>my blog</h1>
                 <p class="hero-subtitle">
                     Reflections on science, research, and life as a student.
                 </p>
 
-                <div class="grid" style="margin-top: 4rem;">
-
-                    <!-- Post 1 (New Creative) -->
-                    <div class="card">
-                        <span class="meta-info">June 2025 | Computational Biology</span>
-                        <h3>The Art of Modeling Biology</h3>
-                        <p class="card-desc">
-                            Coding nature isn't just about equations; it's about capturing the chaos. How using
-                            PhysiCell and NetLogo taught me that biology is the ultimate "spaghetti code" ... and how to
-                            debug it.
-                        </p>
-                        <a href="blog/post4.html">Read Essay →</a>
-                    </div>
-
-                    <!-- Post 2 (New Creative) -->
-                    <div class="card">
-                        <span class="meta-info">May 2025 | Personal Growth</span>
-                        <h3>Rhythms of Discipline</h3>
-                        <p class="card-desc">
-                            From the pool lane to the flute section, discipline is muscle memory. Exploring how my 12
-                            years of competitive swimming and music shape the resilience I need for 120-hour lab
-                            simulations.
-                        </p>
-                        <a href="blog/post5.html">Read Essay →</a>
-                    </div>
-
-                    <!-- Post 3 (New Creative) -->
-                    <div class="card">
-                        <span class="meta-info">April 2025 | Global Health</span>
-                        <h3>Global Health, Local Action</h3>
-                        <p class="card-desc">
-                            Leading a team in Nigeria from my bedroom in Bellevue. The lessons I learned about Hepatitis
-                            awareness, fundraising, and the power of remote student advocacy.
-                        </p>
-                        <a href="blog/post6.html">Read Essay →</a>
-                    </div>
-
-                    <!-- Post 4 (Existing) -->
-                    <div class="card">
-                        <span class="meta-info">March 2025 | Hospital Volunteer</span>
-                        <h3>The Human Side of Medicine</h3>
-                        <p class="card-desc">
-                            A personal story from my time as a hospital ambassador. Witnessing loss, comforting
-                            families, and realizing that medicine is as much about empathy as it is about science.
-                        </p>
-                        <a href="blog/post_human_side.html">Read Essay →</a>
-                    </div>
-
-                    <!-- Post 5 (Existing) -->
-                    <div class="card">
-                        <span class="meta-info">February 2025 | ISEF</span>
-                        <h3>My Origin Story</h3>
-                        <p class="card-desc">
-                            The speech I gave at ISEF. How my grandparents' struggle with diabetes in India ignited a
-                            spark that led me to design "smart bacteria."
-                        </p>
-                        <a href="blog/post_origin.html">Read Essay →</a>
-                    </div>
-
-                    <!-- Post 6 (Existing) -->
-                    <div class="card">
-                        <span class="meta-info">January 2025 | Identity</span>
-                        <h3>Navigating Identity</h3>
-                        <p class="card-desc">
-                            Growing up between cultures as a first-generation Indian American. Finding my place not in a
-                            specific box, but in the diverse and curious community of science fairs.
-                        </p>
-                        <a href="blog/post_identity.html">Read Essay →</a>
-                    </div>
-
+                <div id="blog-grid" class="blog-grid" style="margin-top: 4rem;">
+                    <!-- Blog items rendered via script.js -->
                 </div>
             </div>
         </section>
+    </main>
+
+    <!-- Blog Modal -->
+    <div id="blog-modal" class="modal-overlay">
+        <div class="blog-modal-content">
+            <button class="blog-close-btn" onclick="closeBlogModal()">×</button>
+            <div id="blog-modal-body" class="blog-content-body">
+                <!-- Content injected here -->
+            </div>
+        </div>
+    </div>
+    </div>
+    </section>
     </main>
 
     <footer>
@@ -110,6 +58,7 @@
             &copy; 2025 Priya Emani.
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>

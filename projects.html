@@ -9,151 +9,110 @@
 </head>
 
 <body>
+
     <header>
         <div class="nav-container">
-            <a href="index.html" class="logo">Priya Emani</a>
+            <!-- Brand removed -->
             <nav class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="research.html">Research</a>
-                <a href="projects.html" class="active">Projects</a>
-                <a href="journal.html">Journal</a>
-                <a href="community.html">Community</a>
+                <a href="index.html">home</a>
+                <a href="projects.html" class="active">projects</a>
+                <a href="resume.html">resume</a>
+                <a href="journal.html">blog</a>
+                <a href="book_recs.html">book recs</a>
             </nav>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+                <span>☾</span>
+            </button>
         </div>
     </header>
 
     <main class="section">
         <div class="container">
-            <h1>Projects</h1>
-            <p class="intro-text">
-                Technical implementation details of my work in synthetic biology and computational modeling.
-            </p>
+            <h1>my projects</h1>
+            <!-- Description removed per request -->
 
-            <article style="margin-top: 4rem; margin-bottom: 5rem;">
-                <h2 style="font-size: 2rem; margin-bottom: 0.5rem;">Personalized Diabetic Wound Healing</h2>
-                <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 1.5rem;">A CRISPR-Based
-                    Synthetic Biology Approach Using Engineered Probiotics</p>
+            <!-- Projects Grid -->
+            <div class="projects-grid">
 
-                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 2rem;">
-                    <span class="meta-tag">PhysiCell (C++)</span>
-                    <span class="meta-tag">Synthetic Biology</span>
-                    <span class="meta-tag">Python Data Pipeline</span>
-                    <span class="meta-tag">NetLogo</span>
+                <!-- Project 1 -->
+                <div class="project-container">
+                    <div class="project-date-label">Oct 2024 - Feb 2025</div>
+                    <div class="project-panel" onclick="openProjectModal(0)">
+                        <h3 class="project-name">Personalized Diabetic Wound Healing</h3>
+                        <div class="project-panel-content">
+                            <div class="project-img-spot"></div>
+                            <div class="project-desc-spot">
+                                A CRISPR-Based Synthetic Biology Approach using engineered probiotics to dynamically
+                                detect and treat chronic diabetic foot ulcers.
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="project-links" style="margin-bottom: 2rem;">
-                    <a href="https://github.com/prie8/PhysiCell/blob/master/custom_modules/custom.cpp" target="_blank"
-                        style="margin-right: 1.5rem;">View Custom C++ Logic (GitHub) →</a>
-                    <a href="https://github.com/prie8/PhysiCell/tree/master/scripts#readme" target="_blank">View Python
-                        Scripts (GitHub) →</a>
+                <!-- Project 2 -->
+                <div class="project-container">
+                    <div class="project-date-label">Aug 2023 - Jan 2024</div>
+                    <div class="project-panel" onclick="openProjectModal(1)">
+                        <h3 class="project-name">AI-Driven Protein Interaction</h3>
+                        <div class="project-panel-content">
+                            <div class="project-img-spot"></div>
+                            <div class="project-desc-spot">
+                                Applying AlphaFold2 to model Spike Protein-Collectrin binding as a mechanism for Long
+                                COVID.
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <h3>Introduction & Rationale</h3>
-                <p>
-                    My research addresses the critical failure of current antibiotic treatments for Diabetic Foot Ulcers
-                    (DFUs), which are complicated by chronic inflammation and <em>Staphylococcus aureus</em> biofilms.
-                    Witnessing my grandfather’s struggle with diabetic complications, I hypothesized that a static
-                    chemical treatment is insufficient for such a dynamic biological problem.
-                </p>
-                <p>
-                    I proposed a <strong>"living medicine"</strong>: a commensal <em>E. coli</em> engineered to sense
-                    the specific microenvironment of a diabetic wound (acidic pH < 6.0 and hyperglycemia> 8.0 mM) and
-                        respond by secreting therapeutic agents.
-                </p>
-
-                <h3>Biological Circuit Design</h3>
-                <p>
-                    I designated a dual-input genetic logic gate using the pUC19 plasmid backbone:
-                </p>
-                <ul>
-                    <li><strong>Input 1 (Acidity)</strong>: The <code>PcadA</code> promoter activates in pH < 6.0,
-                            driving expression of <strong>Bovine DNase I</strong> to degrade the biofilm matrix.</li>
-                    <li><strong>Input 2 (Hyperglycemia)</strong>: The <code>PtsG/Crp</code> system detects glucose > 8.0
-                        mM, triggering a <strong>CRISPR activation (CRISPRa)</strong> system (dCas9-VP64).</li>
-                    <li><strong>Output</strong>: The CRISPRa system targets the <code>PlacZ</code> promoter to
-                        upregulate <strong>Human Interleukin-10 (IL-10)</strong>, an anti-inflammatory cytokine.</li>
-                </ul>
-
-                <h3>Computational Implementation: PhysiCell</h3>
-                <p>
-                    I validated this system through high-fidelity agent-based modeling using <strong>PhysiCell</strong>.
-                    This was the most technically demanding phase, involving the customization of the framework to mimic
-                    synthetic biological functions rather than standard tissue mechanics.
-                </p>
-
-                <h4>1. Customizing the Phenotype</h4>
-                <p>
-                    The standard PhysiCell library models immune cells consuming pathogens via phagocytosis. However, my
-                    engineered bacteria needed to <em>secrete</em> an enzyme (DNase I) to damage the biofilm externally.
-                    I wrote a custom C++ phenotype function, <code>predator_phenotype_function</code>, to replace the
-                    default interaction model.
-                </p>
-                <div
-                    style="background: #1e293b; color: #f8fafc; padding: 1.5rem; border-radius: 6px; overflow-x: auto; margin: 1.5rem 0; font-family: monospace; font-size: 0.9rem;">
-                    // Conceptual Logic for Damage Induction<br>
-                    if( local_glucose > glucose_threshold && current_pH < ph_threshold ) {<br>
-                        &nbsp;&nbsp;double damage = damage_rate * dt;<br>
-                        &nbsp;&nbsp;std::vector&lt;Cell*&gt; neighbors = get_possible_neighbors(pCell);<br>
-                        &nbsp;&nbsp;for( Cell* pNeighbor : neighbors ) {<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;if( pNeighbor->type == biofilm_cell_type_index ) {<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pNeighbor->phenotype.damage += damage; // Enzymatic
-                        degradation<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;}<br>
-                        &nbsp;&nbsp;}<br>
-                        }
+                <!-- Project 3 -->
+                <div class="project-container">
+                    <div class="project-date-label">Nov 2022 - Mar 2023</div>
+                    <div class="project-panel" onclick="openProjectModal(2)">
+                        <h3 class="project-name">Non-Target Proteins of SARS-CoV-2</h3>
+                        <div class="project-panel-content">
+                            <div class="project-img-spot"></div>
+                            <div class="project-desc-spot">
+                                Bioinformatics research identifying Collectrin as a potential binding target explaining
+                                organ-specific symptoms.
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <h4>2. XML-Based Boolean Networks</h4>
-                <p>
-                    To encode the genetic circuit without hardcoding every parameter in C++, I utilized PhysiCell’s
-                    <strong>XML-based Boolean Network</strong> feature. This allowed me to define the "brain" of the
-                    smart bacteria directly in the configuration settings:
-                </p>
-                <ul>
-                    <li><strong>Nodes</strong>: Defined <code>is_low_pH</code> and <code>is_high_glucose</code> as
-                        boolean states.</li>
-                    <li><strong>Logic</strong>: Mapped thresholds (pH < 6.0) to these states.</li>
-                    <li><strong>Actuation</strong>: Linked <code>is_low_pH == true</code> to the secretion rate of DNase
-                        I.</li>
-                </ul>
-
-                <h3>Safety Modeling: NetLogo & Statistics</h3>
-                <p>
-                    To address bioethics, I modeled a thermal kill switch in <strong>NetLogo</strong>. The simulation
-                    tested a population of bacteria "escaping" from the cool wound site (30-35°C) to the core body
-                    (>37°C).
-                </p>
-                <p>
-                    Running 100 stochastic simulations (n=100) using BehaviorSpace, the model predicted a mean
-                    effectiveness of <strong>>97%</strong>.
-                </p>
-                <div class="question-block"
-                    style="background: #f1f5f9; padding: 1.5rem; border-left: 4px solid #475569;">
-                    <h4 style="margin-top: 0; color: #1e293b;">Statistical Rigor</h4>
-                    <p style="margin-bottom: 0;">
-                        With a mean survival rate of 3% and an approximate standard deviation of 1.2%, I calculated the
-                        <strong>95% Confidence Interval</strong> to be <strong>[2.76%, 3.24%]</strong>. This narrow
-                        range confirmed the high reliability of the biocontainment mechanism in silico.
-                    </p>
+                <!-- Project 4 -->
+                <div class="project-container">
+                    <div class="project-date-label">June 2025 - Dec 2025</div>
+                    <div class="project-panel" onclick="openProjectModal(3)">
+                        <h3 class="project-name">Keratin Fiber Elasticity</h3>
+                        <div class="project-panel-content">
+                            <div class="project-img-spot"></div>
+                            <div class="project-desc-spot">
+                                Quantifying the effects of thermal vs. chemical denaturation on the tensile strength of
+                                alpha-keratin.
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <h3>Data Analysis Pipeline</h3>
-                <p>
-                    The simulation generated gigabytes of data over a virtual 120-hour period. I developed a Python
-                    pipeline using <strong>Pandas</strong> and <strong>Matplotlib</strong> to:
-                </p>
-                <ul>
-                    <li>Parse binary <code>.mat</code> files generated by PhysiCell.</li>
-                    <li>Track cell population counts (Probiotic vs. <em>S. aureus</em>).</li>
-                    <li>Visualize the "Cell States" over time (e.g., how many bacteria were secreting IL-10 vs. DNase
-                        I).</li>
-                </ul>
-                <p>
-                    <strong>Result:</strong> The "Smart Bacteria" system reduced biofilm mass by 50-70%, significantly
-                    outperforming the antibiotic benchmark (~30%) in this coupled simulation.
-                </p>
+                <!-- Project 5 -->
+                <div class="project-container">
+                    <div class="project-date-label">Dec 2024 - Feb 2025</div>
+                    <div class="project-panel" onclick="openProjectModal(4)">
+                        <h3 class="project-name">Sweet Potato Osmolarity</h3>
+                        <div class="project-panel-content">
+                            <div class="project-img-spot"></div>
+                            <div class="project-desc-spot">
+                                Investigating the impact of NaCl concentration on mass change to determine cellular
+                                osmolarity.
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-            </article>
+
+
+            </div>
+            <!-- End Grid -->
 
         </div>
     </main>
@@ -163,6 +122,19 @@
             &copy; 2025 Priya Emani.
         </div>
     </footer>
+
+    <!-- Modal Overlay -->
+    <div id="project-modal" class="modal-overlay">
+        <!-- Close area is the overlay itself via JS logic, content inside -->
+        <div class="modal-content-box" onclick="event.stopPropagation()">
+            <!-- Stop prop to prevent closing when clicking inside box? User said "click the part of the screen that is not the big box" to close. So clicking overlay closes. Clicking box should NOT close. -->
+            <div id="modal-content-area">
+                <!-- Injected via JS -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
