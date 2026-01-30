@@ -134,28 +134,32 @@ const projectsData = [
         id: 'diabetic-wound',
         title: 'Personalized Diabetic Wound Healing',
         date: 'Oct 2024 - Feb 2025',
-        image: '',
+        image: 'images/project-diabetic/title.png',
         description: 'A CRISPR-Based Synthetic Biology Approach using engineered probiotics to dynamically detect and treat chronic diabetic foot ulcers. Features a smart AND-gate genetic circuit sensing pH and glucose.',
         slides: [
             {
                 title: 'Background',
                 type: 'split',
                 text: 'My research addresses the critical failure of current antibiotic treatments for Diabetic Foot Ulcers (DFUs), which are complication by chronic inflammation and Staphylococcus aureus biofilms. Witnessing my grandfather\'s struggle, I hypothesized that a static chemical treatment is insufficient for such a dynamic biological problem. This personalized approach aims to adaptively respond to the wound environment in real-time, providing targeted therapy only when necessary to minimize off-target effects and resistance development.',
+                images: ['images/project-diabetic/process-flow.png']
             },
             {
                 title: 'Design',
                 type: 'split',
-                text: 'I designed the genetic circuit in silico on a pUC19 backbone with a dual-sensing mechanism. A PcadA promoter was engineered to trigger DNase I production only in acidic conditions (pH < 6.0), while a PglTA/CRP system coupled with CRISPR activation drives IL-10 expression when glucose levels exceed 8.0 mM.<br><br>I simulated the system using PhysiCell to model the complex interactions between the probiotic, the biofilm, and the molecular gradients within the wound.'
+                text: 'I designed the genetic circuit in silico on a pUC19 backbone with a dual-sensing mechanism. A PcadA promoter was engineered to trigger DNase I production only in acidic conditions (pH < 6.0), while a PglTA/CRP system coupled with CRISPR activation drives IL-10 expression when glucose levels exceed 8.0 mM.<br><br>I simulated the system using PhysiCell to model the complex interactions between the probiotic, the biofilm, and the molecular gradients within the wound.',
+                images: ['images/project-diabetic/plasmids.png']
             },
             {
                 title: 'Results',
                 type: 'double-image',
-                text: 'My simulations demonstrated that the engineered system achieved a 50-70% reduction in biofilm mass, significantly outperforming the standard Vancomycin benchmark (~30%) while maintaining high safety standards with a modeled kill switch.'
+                text: 'My simulations demonstrated that the engineered system achieved a 50-70% reduction in biofilm mass, significantly outperforming the standard Vancomycin benchmark (~30%) while maintaining high safety standards with a modeled kill switch.',
+                images: ['images/project-diabetic/results-graphs.png', 'images/project-diabetic/efficacy-chart.png']
             },
             {
                 title: 'Conclusion',
                 type: 'split-reverse',
-                text: 'This project presents a viable design for a smart probiotic that dynamically responds to patient-specific wound conditions. By targeting both the physical biofilm barrier and the underlying inflammation, my approach offers a significant leap forward in personalized wound care.<br><br>Future work will focus on wet-lab validation of the genetic circuit.'
+                text: 'This project presents a viable design for a smart probiotic that dynamically responds to patient-specific wound conditions. By targeting both the physical biofilm barrier and the underlying inflammation, my approach offers a significant leap forward in personalized wound care.<br><br>Future work will focus on wet-lab validation of the genetic circuit.',
+                images: ['images/project-diabetic/simulation-grids.png']
 
             }
         ]
@@ -164,28 +168,32 @@ const projectsData = [
         id: 'alphafold-covid',
         title: 'AI-Driven Protein Interaction',
         date: 'Aug 2023 - Jan 2024',
-        image: '',
-        description: 'Applying AlphaFold2 and molecular docking to model the binding between SARS-CoV-2 Spike Protein and Collectrin, investigating mechanisms for Long COVID.',
+        image: 'images/project-covid/protein-models.png',
+        description: 'Applying AlphaFold2 to model Spike Protein-Collectrin binding as a mechanism for Long COVID.',
         slides: [
             {
                 title: 'Background',
                 type: 'split',
-                text: 'The persistence of Long COVID symptoms, particularly kidney dysfunction, suggests viral mechanisms beyond simple ACE2 binding. I hypothesized that the SARS-CoV-2 Spike Protein may bind to Collectrin, a protein structurally similar to ACE2 and abundant in the kidney.<br><br>I utilized AlphaFold2 for structure prediction and ClusPro 2.0 for molecular docking to investigate this potential interaction.'
+                text: 'The persistence of Long COVID symptoms, particularly kidney dysfunction, suggests viral mechanisms beyond simple ACE2 binding. I hypothesized that the SARS-CoV-2 Spike Protein may bind to Collectrin, a protein structurally similar to ACE2 and abundant in the kidney.<br><br>I utilized AlphaFold2 for structure prediction and ClusPro 2.0 for molecular docking to investigate this potential interaction.',
+                images: ['images/project-covid/method-flowchart.png']
             },
             {
                 title: 'Design',
                 type: 'split',
-                text: 'I began by generating high-confidence 3D models of both Collectrin and the Spike Protein using AlphaFold2 via ColabFold. These structures served as inputs for molecular docking simulations in ClusPro 2.0.<br><br>I analyzed the resulting binding affinities and orientations, comparing them against the well-established Spike-ACE2 interaction to determine the likelihood of a biological effect.'
+                text: 'I began by generating high-confidence 3D models of both Collectrin and the Spike Protein using AlphaFold2 via ColabFold. These structures served as inputs for molecular docking simulations in ClusPro 2.0.<br><br>I analyzed the resulting binding affinities and orientations, comparing them against the well-established Spike-ACE2 interaction to determine the likelihood of a biological effect.',
+                images: ['images/project-covid/protein-models.png']
             },
             {
                 title: 'Results',
                 type: 'double-image',
-                text: 'Docking scores and visual analysis revealed that the Spike Protein binds to Collectrin with an affinity comparable to ACE2, inserting itself into a distinct pocket that suggests a stable, function-disrupting interaction.'
+                text: 'Docking scores and visual analysis revealed that the Spike Protein binds to Collectrin with an affinity comparable to ACE2, inserting itself into a distinct pocket that suggests a stable, function-disrupting interaction.',
+                images: ['images/project-covid/docking-scores.png', 'images/project-covid/lddt-graph-1.png']
             },
             {
                 title: 'Conclusion',
                 type: 'split-reverse',
-                text: 'My findings support the hypothesis that Collectrin serves as a non-target receptor for SARS-CoV-2, potentially explaining kidney-related pathologies in Long COVID.<br><br>This study demonstrates the power of AI-driven structural biology to uncover novel disease mechanisms and identifies a potential target for future therapeutic intervention.'
+                text: 'My findings support the hypothesis that Collectrin serves as a non-target receptor for SARS-CoV-2, potentially explaining kidney-related pathologies in Long COVID.<br><br>This study demonstrates the power of AI-driven structural biology to uncover novel disease mechanisms and identifies a potential target for future therapeutic intervention.',
+                images: ['images/project-covid/binding-site.png']
             }
         ]
     },
@@ -193,28 +201,32 @@ const projectsData = [
         id: 'long-covid-collectrin',
         title: 'Non-Target Proteins of SARS-CoV-2',
         date: 'Nov 2022 - Mar 2023',
-        image: '',
+        image: 'images/project-covid/lddt-graph-2.png',
         description: 'Bioinformatics research identifying Collectrin as a potential binding target for SARS-CoV-2, explaining organ-specific symptoms in Long COVID.',
         slides: [
             {
                 title: 'Background',
                 type: 'split',
-                text: 'As the pandemic evolved, the enduring effects of Long COVID remained a puzzle. I aimed to identify "non-target" receptors—proteins structurally similar to ACE2—that the virus might exploit, potentially explaining multi-organ dysfunction.<br><br>I focused my investigation on Collectrin, a homolog of ACE2, to determine its role in the systemic impact of the virus.'
+                text: 'As the pandemic evolved, the enduring effects of Long COVID remained a puzzle. I aimed to identify "non-target" receptors—proteins structurally similar to ACE2—that the virus might exploit, potentially explaining multi-organ dysfunction.<br><br>I focused my investigation on Collectrin, a homolog of ACE2, to determine its role in the systemic impact of the virus.',
+                images: ['images/project-covid/method-flowchart.png']
             },
             {
                 title: 'Design',
                 type: 'split',
-                text: 'I mined data from NCBI Gene and Protein databases to find potential candidates. Using BLAST (Basic Local Alignment Search Tool), I compared amino acid sequences and analyzed structural homology.<br><br>Furthermore, I analyzed RPKM gene expression data to map the tissue distribution of candidate proteins across the human body.'
+                text: 'I mined data from NCBI Gene and Protein databases to find potential candidates. Using BLAST (Basic Local Alignment Search Tool), I compared amino acid sequences and analyzed structural homology.<br><br>Furthermore, I analyzed RPKM gene expression data to map the tissue distribution of candidate proteins across the human body.',
+                images: ['images/project-covid/lddt-graph-2.png']
             },
             {
                 title: 'Results',
                 type: 'double-image',
-                text: 'Collectrin shares 40.87% sequence identity with ACE2 but is predominantly expressed in the kidney, liver, and stomach, aligning closely with common organ-specific Post-COVID symptoms.'
+                text: 'Collectrin shares 40.87% sequence identity with ACE2 but is predominantly expressed in the kidney, liver, and stomach, aligning closely with common organ-specific Post-COVID symptoms.',
+                images: ['images/project-covid/binding-site.png', 'images/project-covid/docking-scores.png']
             },
             {
                 title: 'Conclusion',
                 type: 'split-reverse',
-                text: 'I identified Collectrin as a likely candidate for off-target viral binding. This finding provides a molecular basis for the kidney and liver damage observed in Long COVID patients.<br><br>It highlights the importance of looking beyond the primary ACE2 receptor to understand the full systemic impact of cellular infection.'
+                text: 'I identified Collectrin as a likely candidate for off-target viral binding. This finding provides a molecular basis for the kidney and liver damage observed in Long COVID patients.<br><br>It highlights the importance of looking beyond the primary ACE2 receptor to understand the full systemic impact of cellular infection.',
+                images: ['images/project-covid/protein-models.png']
             }
         ]
     },
@@ -228,22 +240,26 @@ const projectsData = [
             {
                 title: 'Background',
                 type: 'split',
-                text: 'Hair damage is ubiquitous, but the specific structural breakdown caused by distinct stressors varies. I investigated to what extent thermal and chemical denaturation agents impact the elasticity and tensile strength of alpha-keratin.<br><br>I hypothesized that chemical agents would target the covalent disulfide bonds (strength), while thermal agents would disrupt the non-covalent hydrogen bonds (elasticity).'
+                text: 'Hair damage is ubiquitous, but the specific structural breakdown caused by distinct stressors varies. I investigated to what extent thermal and chemical denaturation agents impact the elasticity and tensile strength of alpha-keratin.<br><br>I hypothesized that chemical agents would target the covalent disulfide bonds (strength), while thermal agents would disrupt the non-covalent hydrogen bonds (elasticity).',
+                images: []
             },
             {
                 title: 'Design',
                 type: 'split',
-                text: 'I subjected human hair fibers to varying concentrations of hydrogen peroxide or heated water baths. I built a custom Arduino-based tensile tester with a 5kg load cell to pull the fibers to failure.<br><br>I recorded Stress-Strain curves to calculate Young\'s Modulus (elasticity) and Ultimate Tensile Strength.'
+                text: 'I subjected human hair fibers to varying concentrations of hydrogen peroxide or heated water baths. I built a custom Arduino-based tensile tester with a 5kg load cell to pull the fibers to failure.<br><br>I recorded Stress-Strain curves to calculate Young\'s Modulus (elasticity) and Ultimate Tensile Strength.',
+                images: []
             },
             {
                 title: 'Results',
                 type: 'double-image',
-                text: 'Chemical treatment caused a massive ~50% drop in tensile strength due to covalent bond cleavage, while thermal treatment primarily reduced elasticity by uncoiling the hydrogen-bonded alpha-helices.'
+                text: 'Chemical treatment caused a massive ~50% drop in tensile strength due to covalent bond cleavage, while thermal treatment primarily reduced elasticity by uncoiling the hydrogen-bonded alpha-helices.',
+                images: []
             },
             {
                 title: 'Conclusion',
                 type: 'split-reverse',
-                text: 'I validated that failure mechanisms in keratin are distinct. Chemical stress leads to structural strength failure due to covalent breakdown, while thermal stress causes elastic failure due to secondary structure uncoiling.<br><br>This quantitative framework helps predict protein stability under different environmental conditions.'
+                text: 'I validated that failure mechanisms in keratin are distinct. Chemical stress leads to structural strength failure due to covalent breakdown, while thermal stress causes elastic failure due to secondary structure uncoiling.<br><br>This quantitative framework helps predict protein stability under different environmental conditions.',
+                images: []
             }
         ]
     },
@@ -339,8 +355,11 @@ function renderSlide() {
         <div class="modal-body ${slide.type}">
     `;
 
-    // Placeholder Helper - Always return placeholder
+    // Updated Image Helper - Now checks for image paths
     const getImg = (idx) => {
+        if (slide.images && slide.images[idx]) {
+            return `<img src="${slide.images[idx]}" alt="Project Image" class="slide-img" />`;
+        }
         return '<div class="slide-placeholder-img"></div>';
     };
 
