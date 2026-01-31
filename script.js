@@ -234,32 +234,32 @@ const projectsData = [
         id: 'keratin-elasticity',
         title: 'Keratin Fiber Elasticity',
         date: 'June 2025 - Dec 2025',
-        image: '',
+        image: 'images/project-keratin/keratin1.png',
         description: 'Quantifying the effects of thermal vs. chemical denaturation on the tensile strength and elasticity of alpha-keratin fibers.',
         slides: [
             {
                 title: 'Background',
                 type: 'split',
                 text: 'Hair damage is ubiquitous, but the specific structural breakdown caused by distinct stressors varies. I investigated to what extent thermal and chemical denaturation agents impact the elasticity and tensile strength of alpha-keratin.<br><br>I hypothesized that chemical agents would target the covalent disulfide bonds (strength), while thermal agents would disrupt the non-covalent hydrogen bonds (elasticity).',
-                images: []
+                images: ['images/project-keratin/keratin1.png']
             },
             {
                 title: 'Design',
                 type: 'split',
                 text: 'I subjected human hair fibers to varying concentrations of hydrogen peroxide or heated water baths. I built a custom Arduino-based tensile tester with a 5kg load cell to pull the fibers to failure.<br><br>I recorded Stress-Strain curves to calculate Young\'s Modulus (elasticity) and Ultimate Tensile Strength.',
-                images: []
+                images: ['images/project-keratin/keratin2.png']
             },
             {
                 title: 'Results',
                 type: 'double-image',
                 text: 'Chemical treatment caused a massive ~50% drop in tensile strength due to covalent bond cleavage, while thermal treatment primarily reduced elasticity by uncoiling the hydrogen-bonded alpha-helices.',
-                images: []
+                images: ['images/project-keratin/keratin3.png', 'images/project-keratin/keratin4.png']
             },
             {
                 title: 'Conclusion',
                 type: 'split-reverse',
                 text: 'I validated that failure mechanisms in keratin are distinct. Chemical stress leads to structural strength failure due to covalent breakdown, while thermal stress causes elastic failure due to secondary structure uncoiling.<br><br>This quantitative framework helps predict protein stability under different environmental conditions.',
-                images: []
+                images: ['images/project-keratin/keratin5.png']
             }
         ]
     },
@@ -267,28 +267,32 @@ const projectsData = [
         id: 'sweet-potato-osmosis',
         title: 'Sweet Potato Osmolarity',
         date: 'Dec 2024 - Feb 2025',
-        image: '',
+        image: 'images/project-osmolarity/osmolarity1.png',
         description: 'Investigating the impact of NaCl concentration on the mass change of Ipomoea Batatas to determine cellular osmolarity.',
         slides: [
             {
                 title: 'Background',
                 type: 'split',
-                text: 'Osmosis varies based on the solute potential of the environment. I aimed to determine the isotonic point (cellular osmolarity) of sweet potato cells by measuring mass change in varying salt solutions.<br><br>I hypothesized that mass would increase in hypotonic solutions and decrease in hypertonic solutions, following a predictable linear trend.'
+                text: 'Osmosis varies based on the solute potential of the environment. I aimed to determine the isotonic point (cellular osmolarity) of sweet potato cells by measuring mass change in varying salt solutions.<br><br>I hypothesized that mass would increase in hypotonic solutions and decrease in hypertonic solutions, following a predictable linear trend.',
+                images: ['images/project-osmolarity/osmolarity1.png']
             },
             {
                 title: 'Design',
                 type: 'split',
-                text: 'I prepared five molar concentrations of NaCl ranging from 0.2M to 1.0M. I cut sweet potatoes into uniform 1cm³ cubes and recorded their initial mass. After 24 hours of submersion, I dried and weighed them again.<br><br>I calculated the percentage mass change and used linear regression to determine the x-intercept (isotonic point).'
+                text: 'I prepared five molar concentrations of NaCl ranging from 0.2M to 1.0M. I cut sweet potatoes into uniform 1cm³ cubes and recorded their initial mass. After 24 hours of submersion, I dried and weighed them again.<br><br>I calculated the percentage mass change and used linear regression to determine the x-intercept (isotonic point).',
+                images: ['images/project-osmolarity/osmolarity2.png']
             },
             {
                 title: 'Results',
                 type: 'double-image',
-                text: 'The data showed a strong negative linear correlation between salt concentration and mass change, allowing me to determine the isotonic point of the cells to be approximately 0.30 M NaCl.'
+                text: 'The data showed a strong negative linear correlation between salt concentration and mass change, allowing me to determine the isotonic point of the cells to be approximately 0.30 M NaCl.',
+                images: ['images/project-osmolarity/osmolarity3.png', 'images/project-osmolarity/osmolarity4.png']
             },
             {
                 title: 'Conclusion',
                 type: 'split-reverse',
-                text: 'I successfully identified the osmolarity of sweet potato cells to be approximately 0.30 M. The experiment validated the principles of water potential, demonstrating that higher solute concentration drives osmotic flow out of the cell.<br><br>This quantitative approach allows for precise characterization of plant tissue properties.'
+                text: 'I successfully identified the osmolarity of sweet potato cells to be approximately 0.30 M. The experiment validated the principles of water potential, demonstrating that higher solute concentration drives osmotic flow out of the cell.<br><br>This quantitative approach allows for precise characterization of plant tissue properties.',
+                images: ['images/project-osmolarity/osmolarity1.png']
             }
         ]
     },
